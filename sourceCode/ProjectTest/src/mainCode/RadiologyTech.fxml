@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainCode.RadiologyTechController">
+   <children>
+      <TableView fx:id="tableView" layoutX="403.0" layoutY="162.0" prefHeight="599.0" prefWidth="777.0">
+         <columns>
+            <TableColumn fx:id="tc_orderDate" prefWidth="113.0" text="Date" />
+            <TableColumn fx:id="tc_orderTime" prefWidth="102.0" text="Time" />
+            <TableColumn fx:id="tc_FirstName" prefWidth="121.0" text="First Name" />
+            <TableColumn fx:id="tc_LastName" prefWidth="107.0" text="Last Name" />
+            <TableColumn fx:id="tc_physName" prefWidth="116.0" text="Physician Name" />
+            <TableColumn fx:id="tc_RadiologyTech" prefWidth="110.0" text="Radiology Tech" />
+            <TableColumn fx:id="tc_status" prefWidth="107.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label id="patientInfo" layoutX="637.0" layoutY="41.0" prefHeight="23.0" prefWidth="106.0" text="Patient Information" />
+      <Label layoutX="150.0" layoutY="44.0" text="Radiologist Technician" />
+      <Button layoutX="129.0" layoutY="81.0" mnemonicParsing="false" onAction="#searchXRay" prefHeight="23.0" prefWidth="158.0" text="Search for Image" />
+      <TextField fx:id="tf_XRayPath" editable="false" layoutX="55.0" layoutY="121.0" prefHeight="25.0" prefWidth="305.0" promptText="Image File Path" />
+      <TextField fx:id="tf_RenameXRay" layoutX="55.0" layoutY="162.0" prefHeight="25.0" prefWidth="305.0" promptText="Rename Image (First Name, Last Name) .png/.jpg" />
+      <Button layoutX="167.0" layoutY="204.0" mnemonicParsing="false" onAction="#saveXRay" prefHeight="25.0" prefWidth="82.0" text="Save" />
+      <Label fx:id="lb_xraySaved" layoutX="123.0" layoutY="239.0" prefHeight="17.0" prefWidth="169.0" textFill="#02a41a" />
+      <TextField fx:id="tf_patientFName" layoutX="449.0" layoutY="81.0" promptText="Patient First Name" />
+      <TextField fx:id="tf_patientLName" layoutX="449.0" layoutY="117.0" promptText="Patient Last Name" />
+      <CheckBox fx:id="cb_complete" layoutX="654.0" layoutY="85.0" mnemonicParsing="false" text="Complete" />
+      <CheckBox fx:id="cb_incomplete" layoutX="654.0" layoutY="121.0" mnemonicParsing="false" text="Incomplete" />
+      <Button layoutX="791.0" layoutY="87.0" mnemonicParsing="false" onAction="#updatePatient" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="iv_xRay" fitHeight="349.0" fitWidth="379.0" layoutX="14.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="160.0" layoutY="687.0" mnemonicParsing="false" onAction="#clearPatient" text="Clear Patient">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

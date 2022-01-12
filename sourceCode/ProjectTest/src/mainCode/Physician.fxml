@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainCode.PhysicianController">
+   <children>
+      <Label layoutX="25.0" layoutY="123.0" />
+      <Label layoutX="141.0" layoutY="41.0" prefHeight="25.0" prefWidth="81.0" text="Physician Page" />
+      <TableView fx:id="tv_schedule" layoutX="420.0" layoutY="67.0" prefHeight="431.0" prefWidth="751.0">
+         <columns>
+            <TableColumn fx:id="tc_patientFName" prefWidth="139.0" text="First Name" />
+            <TableColumn fx:id="tc_patientLName" prefWidth="133.0" text="Last Name" />
+            <TableColumn fx:id="tc_physName" prefWidth="152.0" text="Physician Name" />
+            <TableColumn fx:id="tc_date" prefWidth="210.0" text="Date" />
+            <TableColumn fx:id="tc_time" minWidth="0.0" prefWidth="116.0" text="Time" />
+         </columns>
+      </TableView>
+      <Label layoutX="147.0" layoutY="311.0" text="Order Image" />
+      <Button layoutX="147.0" layoutY="431.0" mnemonicParsing="false" onAction="#orderXRay" prefHeight="11.0" prefWidth="71.0" text="Submit" />
+      <TextArea fx:id="physReport" layoutX="641.0" layoutY="565.0" prefHeight="330.0" prefWidth="530.0" promptText="Dr. Name                                                                                                                                         Patient Name                                                                                                                               Report" />
+      <Button layoutX="1058.0" layoutY="912.0" mnemonicParsing="false" onAction="#submitReport" prefHeight="25.0" prefWidth="113.0" text="Submit Report" />
+      <Label layoutX="896.0" layoutY="525.0" text="Diagnosis Report" />
+      <Label layoutX="141.0" layoutY="77.0" text="Search Patients" />
+      <TextField fx:id="searchFName" layoutX="46.0" layoutY="111.0" prefHeight="25.0" prefWidth="131.0" promptText="Patient First Name" />
+      <TextField fx:id="searchLName" layoutX="187.0" layoutY="111.0" prefHeight="25.0" prefWidth="131.0" promptText="Patient Last Name" />
+      <Button layoutX="146.0" layoutY="148.0" mnemonicParsing="false" onAction="#searchPatient" prefHeight="25.0" prefWidth="71.0" text="Search" />
+      <TextArea fx:id="radReport" layoutX="64.0" layoutY="565.0" prefHeight="330.0" prefWidth="530.0" />
+      <Button layoutX="64.0" layoutY="912.0" mnemonicParsing="false" onAction="#loadRadReport" prefHeight="25.0" prefWidth="207.0" text="Load Patient Radiology Report" />
+      <TextField fx:id="physLName" layoutX="27.0" layoutY="350.0" prefHeight="25.0" prefWidth="170.0" promptText="Physician Last Name" />
+      <TextField fx:id="RadTechLName" layoutX="206.0" layoutY="350.0" prefHeight="25.0" prefWidth="170.0" promptText="Radiology Tech Last Name" />
+      <Label layoutX="283.0" layoutY="525.0" text="Radiology Report" />
+      <Label layoutX="725.0" layoutY="32.0" text="Patient/Physician Schedual" />
+      <Label fx:id="lb_patientDNE" layoutX="102.0" layoutY="269.0" prefHeight="17.0" prefWidth="161.0" textFill="#cd0404" />
+      <Label fx:id="lb_patientRadReportDNE" layoutX="283.0" layoutY="916.0" prefHeight="17.0" prefWidth="217.0" textFill="#d30000" />
+      <Label fx:id="lb_PhyReportScses" layoutX="828.0" layoutY="916.0" prefHeight="17.0" prefWidth="217.0" textFill="#01bc1d" />
+      <Label fx:id="lb_orderScses" layoutX="142.0" layoutY="482.0" prefHeight="17.0" prefWidth="71.0" textFill="#03bc2b">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="64.0" layoutY="961.0" mnemonicParsing="false" onAction="#clearPatient" prefHeight="25.0" prefWidth="113.0" text="Clear Patient" />
+      <TableView fx:id="tbl_currPatient" layoutX="49.0" layoutY="188.0" prefHeight="58.0" prefWidth="276.0">
+        <columns>
+          <TableColumn fx:id="tv_currFName" prefWidth="131.0" text="Patient First Name" />
+          <TableColumn fx:id="tv_currLName" prefWidth="144.0" text="Patient Last Name" />
+        </columns>
+      </TableView>
+      <Label fx:id="lb_radTechDNE" layoutX="102.0" layoutY="484.0" prefHeight="17.0" prefWidth="170.0" textFill="#c60000" />
+      <DatePicker fx:id="dp_orderDate" layoutX="27.0" layoutY="392.0" prefHeight="25.0" prefWidth="170.0" promptText="Date for Order" />
+      <TextField fx:id="tf_orderTime" layoutX="206.0" layoutY="392.0" prefHeight="25.0" prefWidth="170.0" promptText="Time (00:00)" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainCode.loginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="236.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../Graphics/LoginPic.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="tf_UserName" layoutX="401.0" layoutY="142.0" prefHeight="25.0" prefWidth="185.0" promptText="User Name" />
+            <TextField fx:id="tf_Password" layoutX="401.0" layoutY="224.0" prefHeight="25.0" prefWidth="185.0" promptText="Password" />
+            <Label layoutX="331.0" layoutY="146.0" text="User Name" />
+            <Label layoutX="336.0" layoutY="228.0" text="Password" />
+            <Button layoutX="433.0" layoutY="292.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="121.0" text="Login" />
+            <Label layoutX="51.0" layoutY="125.0" text="RAdTech RIS" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="26.0" layoutY="210.0" prefHeight="78.0" prefWidth="185.0" text="Welcome, We are here to help." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_pta" layoutX="423.0" layoutY="265.0" prefHeight="17.0" prefWidth="163.0" textAlignment="CENTER" textFill="#dd0000" underline="true" />
+         </children></AnchorPane>
+   </children>
+</GridPane>
