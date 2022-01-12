@@ -1,0 +1,5 @@
+1000 Admin Admin Admin 123456 Admin
+1 Russell Schiesser RSchiesser 123456 Receptionist
+2 James Long JLong 123456 Radiology_Tech
+3 Jackson Persyn JPersyn 123456 Physician
+4 Alejandro Izaguirre AIzaguirre 123456 Radiologist
